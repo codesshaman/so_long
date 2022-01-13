@@ -6,7 +6,7 @@
 /*   By: jleslee <jleslee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 21:16:23 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/13 21:44:30 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/13 21:53:09 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,11 @@
 # define WINMSG		"You Won! Score: "
 # define LOSEMSG	"You Lost!\nFINAL SCORE: "
 # define LEAVE		"You may now close the game.\n"
+# define STALKER	"./src/imgs/hero/herooms.xpm"
+# define GROUND 	"./src/imgs/tileset/tileset.xpm"
+# define TREE		"./src/imgs/tileset/walls.xpm"
+# define BUNKER		"./src/imgs/tileset/exits.xpm"
+# define MEDUSA		"./src/imgs/collectible/coinfront.xpm"
 
 typedef struct s_vars{
 	void	*mlx;

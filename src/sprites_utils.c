@@ -6,7 +6,7 @@
 /*   By: jleslee <jleslee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 21:21:31 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/13 21:22:06 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/13 21:53:22 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	load_files(t_game *game)
 {
-	game->hero.path = "./src/imgs/hero/herooms.xpm";
-	game->floor.path = "./src/imgs/tileset/tileset.xpm";
-	game->wall.path = "./src/imgs/tileset/walls.xpm";
-	game->ext.path = "./src/imgs/tileset/exits.xpm";
-	game->clct.path = "./src/imgs/collectible/coinfront.xpm";
+	game->hero.path = STALKER;
+	game->floor.path = GROUND;
+	game->wall.path = TREE;
+	game->ext.path = BUNKER;
+	game->clct.path = MEDUSA;
 	return (0);
 }
 
