@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error_handling_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mameneze <mameneze@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: jleslee <jleslee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/24 21:02:51 by mameneze          #+#    #+#             */
-/*   Updated: 2021/09/09 21:53:42 by mameneze         ###   ########.fr       */
+/*   Created: 2022/01/13 21:21:23 by jleslee           #+#    #+#             */
+/*   Updated: 2022/01/13 21:26:30 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

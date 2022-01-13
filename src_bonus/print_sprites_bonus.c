@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_sprites_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mameneze <mameneze@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: jleslee <jleslee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/22 23:43:01 by mameneze          #+#    #+#             */
-/*   Updated: 2021/09/08 23:39:02 by mameneze         ###   ########.fr       */
+/*   Created: 2022/01/11 11:42:32 by jleslee           #+#    #+#             */
+/*   Updated: 2022/01/13 21:25:44 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

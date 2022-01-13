@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   player_movement_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mameneze <mameneze@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: jleslee <jleslee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/24 19:30:49 by mameneze          #+#    #+#             */
-/*   Updated: 2021/09/08 20:11:34 by mameneze         ###   ########.fr       */
+/*   Created: 2022/01/11 21:25:27 by jleslee           #+#    #+#             */
+/*   Updated: 2022/01/13 21:25:40 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

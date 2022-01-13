@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   image_printing_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mameneze <mameneze@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: jleslee <jleslee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/05 19:33:38 by mameneze          #+#    #+#             */
-/*   Updated: 2021/09/08 23:38:50 by mameneze         ###   ########.fr       */
+/*   Created: 2022/01/13 21:25:59 by jleslee           #+#    #+#             */
+/*   Updated: 2022/01/13 21:26:02 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
