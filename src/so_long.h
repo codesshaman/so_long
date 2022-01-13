@@ -6,7 +6,7 @@
 /*   By: jleslee <jleslee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 21:16:23 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/13 21:17:49 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/13 21:44:30 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,10 @@
 # define LEFT       97
 # define RIGHT      100
 # define ESC        65307
+# define UP2        119 
+# define DOWN2      115
+# define LEFT2      97
+# define RIGHT2     100
 # define ERROR_DEF  "Error\n"
 # define OPLRERROR  "Need a player position on the map!\n"
 # define MRPLRERROR "Only 1 player allowed!\n"
