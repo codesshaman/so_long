@@ -86,7 +86,7 @@ typedef struct s_game{
 	t_collect	clct;
 	t_sprite	tree;
 	t_sprite	ground;
-	t_sprite	ext;
+	t_sprite	bunker;
 	int			qtext;
 	int			flsz;
 	int			col;

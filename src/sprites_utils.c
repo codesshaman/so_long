@@ -17,7 +17,7 @@ int	load_files(t_game *game)
 	game->stalker.path = STALKER;
 	game->ground.path = GROUND;
 	game->tree.path = TREE;
-	game->ext.path = BUNKER;
+	game->bunker.path = BUNKER;
 	game->clct.path = MEDUSA;
 	return (0);
 }
@@ -38,8 +38,8 @@ int	load_sprites(t_game *game)
 			&game->ground.img_wid, &game->ground.img_hght);
 	game->clct.img = mlx_xpm_file_to_image(game->vrs.mlx, game->clct.path,
 			&game->clct.img_wid, &game->clct.img_hght);
-	game->ext.img = mlx_xpm_file_to_image(game->vrs.mlx, game->ext.path,
-			&game->ext.img_wid, &game->ext.img_hght);
+	game->bunker.img = mlx_xpm_file_to_image(game->vrs.mlx, game->bunker.path,
+			&game->bunker.img_wid, &game->bunker.img_hght);
 	return (0);
 }
 
@@ -49,7 +49,7 @@ int	unload_sprites(t_game *game)
 	mlx_destroy_image(game->vrs.mlx, game->ground.img);
 	mlx_destroy_image(game->vrs.mlx, game->tree.img);
 	mlx_destroy_image(game->vrs.mlx, game->clct.img);
-	mlx_destroy_image(game->vrs.mlx, game->ext.img);
+	mlx_destroy_image(game->vrs.mlx, game->bunker.img);
 	return (0);
 }
 

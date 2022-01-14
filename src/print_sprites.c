@@ -53,7 +53,7 @@ int	put_collectible(t_game *game, int x, int y)
 int	put_exit(t_game *game, int x, int y)
 {
 	mlx_put_image_to_window(game->vrs.mlx, game->vrs.win,
-		game->ext.img, (x * game->tree.img_wid),
+		game->bunker.img, (x * game->tree.img_wid),
 		(y * game->tree.img_hght));
 	return (0);
 }
