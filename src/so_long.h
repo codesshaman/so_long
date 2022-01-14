@@ -30,7 +30,7 @@
 # define ERROR_DEF  "Error\n"
 # define OPLRERROR  "Need a player position on the map!\n"
 # define MRPLRERROR "Only 1 player allowed!\n"
-# define CLCTERROR  "Need at least one collectible!\n"
+# define ARTERROR	"Need at least one collectible!\n"
 # define EXTERROR   "Need at least one exit!\n"
 # define VLDMERROR  "Not a valid map!\n"
 # define PARAMERROR	"Invalid parameter!\n"
@@ -83,7 +83,7 @@ typedef struct s_game{
 	t_vars		vrs;
 	t_score		scr;
 	t_stalker	stalker;
-	t_collect	clct;
+	t_collect	medusa;
 	t_sprite	tree;
 	t_sprite	ground;
 	t_sprite	bunker;

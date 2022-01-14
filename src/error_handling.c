@@ -79,7 +79,7 @@ static int	check_map_content(t_game *game)
 		if (game->map[i] == 'E')
 			game->qtext++;
 		if (game->map[i] == 'C')
-			game->clct.qtcollect++;
+			game->medusa.qtcollect++;
 		i++;
 	}
 	return (0);
@@ -92,8 +92,8 @@ int	level_validation(t_game *game)
 		return (printf(ERROR_DEF OPLRERROR), free(game->map), exit(0), 0);
 	if (game->stalker.qthero > 1)
 		return (printf(ERROR_DEF MRPLRERROR), free(game->map), exit(0), 0);
-	if (game->clct.qtcollect == 0)
-		return (printf(ERROR_DEF CLCTERROR), free(game->map), exit(0), 0);
+	if (game->medusa.qtcollect == 0)
+		return (printf(ERROR_DEF ARTERROR), free(game->map), exit(0), 0);
 	if (game->qtext == 0)
 		return (printf(ERROR_DEF EXTERROR), free(game->map), exit(0), 0);
 	return (0);

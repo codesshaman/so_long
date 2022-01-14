@@ -45,7 +45,7 @@ int	put_collectible(t_game *game, int x, int y)
 		game->ground.img, (x * game->tree.img_wid),
 		(y * game->tree.img_hght));
 	mlx_put_image_to_window(game->vrs.mlx, game->vrs.win,
-		game->clct.img, (x * game->tree.img_wid + 12),
+		game->medusa.img, (x * game->tree.img_wid + 12),
 		(y * game->tree.img_hght + 12));
 	return (0);
 }

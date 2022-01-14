@@ -52,10 +52,10 @@ int	read_map(t_game *game)
 
 int	check_win_condition(t_game *game)
 {
-	if (game->clct.qtcollect == 0)
+	if (game->medusa.qtcollect == 0)
 	{
 		printf("You can now leave the map!\n");
-		game->clct.qtcollect = -1;
+		game->medusa.qtcollect = -1;
 	}
 	return (0);
 }

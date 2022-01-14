@@ -38,7 +38,7 @@ static int	init_game(t_game *game)
 {
 	game->scr.scr = 0;
 	game->qtext = 0;
-	game->clct.qtcollect = 0;
+	game->medusa.qtcollect = 0;
 	game->stalker.qthero = 0;
 	return (0);
 }
