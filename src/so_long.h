@@ -39,11 +39,11 @@
 # define WINMSG		"You Won! Score: "
 # define LOSEMSG	"You Lost!\nFINAL SCORE: "
 # define LEAVE		"You may now close the game.\n"
-# define STALKER	"./src/imgs/hero/herooms.xpm"
-# define GROUND 	"./src/imgs/tileset/tileset.xpm"
-# define TREE		"./src/imgs/tileset/walls.xpm"
-# define BUNKER		"./src/imgs/tileset/exits.xpm"
-# define MEDUSA		"./src/imgs/collectible/coinfront.xpm"
+# define STALKER	"./textures/stalker.xpm"
+# define GROUND 	"./textures/ground.xpm"
+# define TREE		"./textures/tree.xpm"
+# define BUNKER		"./textures/bunker.xpm"
+# define MEDUSA		"./textures/medusa.xpm"
 
 typedef struct s_vars{
 	void	*mlx;
