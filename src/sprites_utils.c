@@ -16,7 +16,7 @@ int	load_files(t_game *game)
 {
 	game->stalker.path = STALKER;
 	game->ground.path = GROUND;
-	game->wall.path = TREE;
+	game->tree.path = TREE;
 	game->ext.path = BUNKER;
 	game->clct.path = MEDUSA;
 	return (0);
@@ -32,8 +32,8 @@ int	load_sprites(t_game *game)
 {
 	game->stalker.img = mlx_xpm_file_to_image(game->vrs.mlx, game->stalker.path,
 			&game->stalker.img_wid, &game->stalker.img_hght);
-	game->wall.img = mlx_xpm_file_to_image(game->vrs.mlx, game->wall.path,
-			&game->wall.img_wid, &game->wall.img_hght);
+	game->tree.img = mlx_xpm_file_to_image(game->vrs.mlx, game->tree.path,
+			&game->tree.img_wid, &game->tree.img_hght);
 	game->ground.img = mlx_xpm_file_to_image(game->vrs.mlx, game->ground.path,
 			&game->ground.img_wid, &game->ground.img_hght);
 	game->clct.img = mlx_xpm_file_to_image(game->vrs.mlx, game->clct.path,
@@ -47,7 +47,7 @@ int	unload_sprites(t_game *game)
 {
 	mlx_destroy_image(game->vrs.mlx, game->stalker.img);
 	mlx_destroy_image(game->vrs.mlx, game->ground.img);
-	mlx_destroy_image(game->vrs.mlx, game->wall.img);
+	mlx_destroy_image(game->vrs.mlx, game->tree.img);
 	mlx_destroy_image(game->vrs.mlx, game->clct.img);
 	mlx_destroy_image(game->vrs.mlx, game->ext.img);
 	return (0);

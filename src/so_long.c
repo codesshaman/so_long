@@ -59,8 +59,8 @@ int	main(int argc, char **argv)
 	load_files(&game);
 	game.vrs.mlx = mlx_init();
 	load_sprites(&game);
-	game.vrs.mapw = game.col * game.wall.img_wid;
-	game.vrs.maph = game.lin * game.wall.img_hght;
+	game.vrs.mapw = game.col * game.tree.img_wid;
+	game.vrs.maph = game.lin * game.tree.img_hght;
 	game.vrs.win = mlx_new_window(game.vrs.mlx,
 			game.vrs.mapw, game.vrs.maph, "SO_LONG");
 	image_to_window(&game);

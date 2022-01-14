@@ -17,7 +17,7 @@ int	imgtoPrint(t_game *game, int size, int column, int line)
 	if (game->map[size] == '0')
 		put_ground(game, column, line);
 	if (game->map[size] == '1')
-		put_wall(game, column, line);
+		put_tree(game, column, line);
 	if (game->map[size] == 'P')
 		put_player(game, column, line);
 	if (game->map[size] == 'C')

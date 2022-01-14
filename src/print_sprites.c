@@ -12,48 +12,48 @@
 
 #include "so_long.h"
 
-int	put_wall(t_game *game, int x, int y)
+int	put_tree(t_game *game, int x, int y)
 {
 	mlx_put_image_to_window(game->vrs.mlx, game->vrs.win,
-		game->wall.img, (x * game->wall.img_wid),
-		(y * game->wall.img_hght));
+		game->tree.img, (x * game->tree.img_wid),
+		(y * game->tree.img_hght));
 	return (0);
 }
 
 int	put_ground(t_game *game, int x, int y)
 {
 	mlx_put_image_to_window(game->vrs.mlx, game->vrs.win,
-		game->ground.img, (x * game->wall.img_wid),
-		(y * game->wall.img_hght));
+		game->ground.img, (x * game->tree.img_wid),
+		(y * game->tree.img_hght));
 	return (0);
 }
 
 int	put_player(t_game *game, int x, int y)
 {
 	mlx_put_image_to_window(game->vrs.mlx, game->vrs.win,
-		game->ground.img, (x * game->wall.img_wid),
-		(y * game->wall.img_hght));
+		game->ground.img, (x * game->tree.img_wid),
+		(y * game->tree.img_hght));
 	mlx_put_image_to_window(game->vrs.mlx, game->vrs.win,
-		game->stalker.img, (x * game->wall.img_wid),
-		(y * game->wall.img_hght));
+		game->stalker.img, (x * game->tree.img_wid),
+		(y * game->tree.img_hght));
 	return (0);
 }
 
 int	put_collectible(t_game *game, int x, int y)
 {
 	mlx_put_image_to_window(game->vrs.mlx, game->vrs.win,
-		game->ground.img, (x * game->wall.img_wid),
-		(y * game->wall.img_hght));
+		game->ground.img, (x * game->tree.img_wid),
+		(y * game->tree.img_hght));
 	mlx_put_image_to_window(game->vrs.mlx, game->vrs.win,
-		game->clct.img, (x * game->wall.img_wid + 12),
-		(y * game->wall.img_hght + 12));
+		game->clct.img, (x * game->tree.img_wid + 12),
+		(y * game->tree.img_hght + 12));
 	return (0);
 }
 
 int	put_exit(t_game *game, int x, int y)
 {
 	mlx_put_image_to_window(game->vrs.mlx, game->vrs.win,
-		game->ext.img, (x * game->wall.img_wid),
-		(y * game->wall.img_hght));
+		game->ext.img, (x * game->tree.img_wid),
+		(y * game->tree.img_hght));
 	return (0);
 }

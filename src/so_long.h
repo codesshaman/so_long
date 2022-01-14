@@ -84,7 +84,7 @@ typedef struct s_game{
 	t_score		scr;
 	t_stalker	stalker;
 	t_collect	clct;
-	t_sprite	wall;
+	t_sprite	tree;
 	t_sprite	ground;
 	t_sprite	ext;
 	int			qtext;
@@ -102,7 +102,7 @@ int		load_files(t_game *game);
 int		load_map(t_game *game);
 int		read_map(t_game *game);
 int		endgame(t_game *game);
-int		put_wall(t_game *game, int x, int y);
+int		put_tree(t_game *game, int x, int y);
 int		put_ground(t_game *game, int x, int y);
 int		put_player(t_game *game, int x, int y);
 int		put_collectible(t_game *game, int x, int y);
