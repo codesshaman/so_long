@@ -18,6 +18,7 @@ SRC_FILES	=	error_handling.c \
 				player_movement.c \
 				print_sprites.c \
 				sprites_utils.c \
+				stalker_checks.c \
 				utils.c \
 				so_long.c
 				

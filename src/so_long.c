@@ -49,8 +49,8 @@ int	main(int argc, char **argv)
 
 	if (argc != 2)
 		return (printf(ERROR_DEF "Invalid parameters!\n"), 0);
-	game.mapf = argv[1];
-	check_extension(&game);
+	game.mappath = argv[1];
+	extension_check(&game);
 	load_map(&game);
 	read_map(&game);
 	init_game(&game);

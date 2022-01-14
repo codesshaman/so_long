@@ -92,7 +92,7 @@ typedef struct s_game{
 	int			col;
 	int			lin;
 	char		*map;
-	char		*mapf;
+	char		*mappath;
 }				t_game;
 
 char	*get_player(char *s, char c);
@@ -115,7 +115,7 @@ int		image_to_window(t_game *game);
 int		imgtoPrint(t_game *game, int size, int column, int line);
 int		ft_strlen(char *s);
 void	*ft_calloc(size_t nmemb, size_t size);
-int		check_extension(t_game *game);
+int		extension_check(t_game *game);
 int		check_walling(t_game *game);
 int		level_validation(t_game *game);
 int		check_win_condition(t_game *game);

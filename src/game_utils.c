@@ -21,7 +21,7 @@ int	load_map(t_game *game)
 	eof = 1;
 	game->lin = 1;
 	game->flsz = 0;
-	fd = open(game->mapf, O_RDONLY);
+	fd = open(game->mappath, O_RDONLY);
 	if (fd < 0)
 		return (printf("Error: Invalid file descriptor!\n"), exit(0), 0);
 	while (eof > 0)
@@ -44,7 +44,7 @@ int	read_map(t_game *game)
 {
 	int		fd;
 
-	fd = open(game->mapf, O_RDONLY);
+	fd = open(game->mappath, O_RDONLY);
 	read(fd, game->map, game->flsz + 1);
 	close(fd);
 	return (0);
@@ -58,16 +58,4 @@ int	check_win_condition(t_game *game)
 		game->medusa.qtcollect = -1;
 	}
 	return (0);
-}
-
-int	check_extension(t_game *game)
-{
-	int	size;
-
-	size = ft_strlen(game->mapf) - 4;
-	if (game->mapf[size] == '.' && game->mapf[size + 1] == 'b'
-		&& game->mapf[size + 2] == 'e' && game->mapf[size + 3] == 'r')
-		return (0);
-	return (printf("Invalid extension. Must be a \".ber\" file\n"),
-		exit(0), 0);
 }
