@@ -59,13 +59,13 @@ typedef struct s_sprite{
 	int		img_hght;
 }				t_sprite;
 
-typedef struct s_Hero{
+typedef struct s_stalker{
 	char	*path;
 	void	*img;
 	int		img_wid;
 	int		img_hght;
 	int		qthero;
-}				t_hero;
+}				t_stalker;
 
 typedef struct s_collect{
 	char	*path;
@@ -82,7 +82,7 @@ typedef struct s_score{
 typedef struct s_game{
 	t_vars		vrs;
 	t_score		scr;
-	t_hero		hero;
+	t_stalker	stalker;
 	t_collect	clct;
 	t_sprite	wall;
 	t_sprite	floor;

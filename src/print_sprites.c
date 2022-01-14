@@ -34,7 +34,7 @@ int	put_player(t_game *game, int x, int y)
 		game->floor.img, (x * game->wall.img_wid),
 		(y * game->wall.img_hght));
 	mlx_put_image_to_window(game->vrs.mlx, game->vrs.win,
-		game->hero.img, (x * game->wall.img_wid),
+		game->stalker.img, (x * game->wall.img_wid),
 		(y * game->wall.img_hght));
 	return (0);
 }

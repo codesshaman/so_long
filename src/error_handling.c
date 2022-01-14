@@ -75,7 +75,7 @@ static int	check_map_content(t_game *game)
 	{
 		check_invalid_chars(game, i);
 		if (game->map[i] == 'P')
-			game->hero.qthero++;
+			game->stalker.qthero++;
 		if (game->map[i] == 'E')
 			game->qtext++;
 		if (game->map[i] == 'C')
@@ -88,9 +88,9 @@ static int	check_map_content(t_game *game)
 int	level_validation(t_game *game)
 {
 	check_map_content(game);
-	if (game->hero.qthero == 0)
+	if (game->stalker.qthero == 0)
 		return (printf(ERROR_DEF OPLRERROR), free(game->map), exit(0), 0);
-	if (game->hero.qthero > 1)
+	if (game->stalker.qthero > 1)
 		return (printf(ERROR_DEF MRPLRERROR), free(game->map), exit(0), 0);
 	if (game->clct.qtcollect == 0)
 		return (printf(ERROR_DEF CLCTERROR), free(game->map), exit(0), 0);
