@@ -20,10 +20,10 @@ int	put_wall(t_game *game, int x, int y)
 	return (0);
 }
 
-int	put_floor(t_game *game, int x, int y)
+int	put_ground(t_game *game, int x, int y)
 {
 	mlx_put_image_to_window(game->vrs.mlx, game->vrs.win,
-		game->floor.img, (x * game->wall.img_wid),
+		game->ground.img, (x * game->wall.img_wid),
 		(y * game->wall.img_hght));
 	return (0);
 }
@@ -31,7 +31,7 @@ int	put_floor(t_game *game, int x, int y)
 int	put_player(t_game *game, int x, int y)
 {
 	mlx_put_image_to_window(game->vrs.mlx, game->vrs.win,
-		game->floor.img, (x * game->wall.img_wid),
+		game->ground.img, (x * game->wall.img_wid),
 		(y * game->wall.img_hght));
 	mlx_put_image_to_window(game->vrs.mlx, game->vrs.win,
 		game->stalker.img, (x * game->wall.img_wid),
@@ -42,7 +42,7 @@ int	put_player(t_game *game, int x, int y)
 int	put_collectible(t_game *game, int x, int y)
 {
 	mlx_put_image_to_window(game->vrs.mlx, game->vrs.win,
-		game->floor.img, (x * game->wall.img_wid),
+		game->ground.img, (x * game->wall.img_wid),
 		(y * game->wall.img_hght));
 	mlx_put_image_to_window(game->vrs.mlx, game->vrs.win,
 		game->clct.img, (x * game->wall.img_wid + 12),

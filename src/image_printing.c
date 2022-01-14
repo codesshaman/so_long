@@ -15,7 +15,7 @@
 int	imgtoPrint(t_game *game, int size, int column, int line)
 {	
 	if (game->map[size] == '0')
-		put_floor(game, column, line);
+		put_ground(game, column, line);
 	if (game->map[size] == '1')
 		put_wall(game, column, line);
 	if (game->map[size] == 'P')
