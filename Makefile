@@ -12,13 +12,13 @@ BNS_HEADER	=	./src_bonus/so_long_bonus.h
 
 VALGRIND 	=	valgrind --leak-check=full --show-leak-kinds=all
 
-SRC_FILES	=	error_handling.c \
-				game_utils.c \
+SRC_FILES	=	game_utils.c \
 				image_printing.c \
 				player_movement.c \
 				print_sprites.c \
-				sprites_utils.c \
 				stalker_checks.c \
+				stalker_errors.c \
+				stalker_utils.c \
 				utils.c \
 				so_long.c
 				
