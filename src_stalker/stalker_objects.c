@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_sprites.c                                    :+:      :+:    :+:   */
+/*   stalker_objects.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 14:15:07 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/15 11:44:31 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/15 13:48:59 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	put_artefact(t_game *game, int x, int y)
 		game->ground.img, (x * game->tree.img_wid),
 		(y * game->tree.img_hght));
 	mlx_put_image_to_window(game->vrs.mlx, game->vrs.win,
-		game->medusa.img, (x * game->tree.img_wid + 12),
+		game->arts.img, (x * game->tree.img_wid + 12),
 		(y * game->tree.img_hght + 12));
 	return (0);
 }

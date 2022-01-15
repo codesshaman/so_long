@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   player_movement.c                                  :+:      :+:    :+:   */
+/*   stalker_player.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jleslee <jleslee@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 09:11:21 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/13 21:21:03 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/15 13:49:55 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ int	move_up(t_game *game)
 		playercurrentpos = get_player(game->map, 'P');
 		playernextpos = get_player(game->map, 'P') - game->col - 1;
 		if (*playernextpos == '0' || *playernextpos == 'C'
-			|| (*playernextpos == 'E' && game->medusa.qtcollect == -1))
+			|| (*playernextpos == 'E' && game->arts.qtcollect == -1))
 		{
 			if (*playernextpos == 'C')
-				game->medusa.qtcollect--;
+				game->arts.qtcollect--;
 			if (*playernextpos == 'E')
 				finished(game);
 			*playercurrentpos = '0';
@@ -57,10 +57,10 @@ int	move_down(t_game *game)
 		playercurrentpos = get_player(game->map, 'P');
 		playernextpos = get_player(game->map, 'P') + game->col + 1;
 		if (*playernextpos == '0' || *playernextpos == 'C'
-			|| (*playernextpos == 'E' && game->medusa.qtcollect == -1))
+			|| (*playernextpos == 'E' && game->arts.qtcollect == -1))
 		{
 			if (*playernextpos == 'C')
-				game->medusa.qtcollect--;
+				game->arts.qtcollect--;
 			if (*playernextpos == 'E')
 				finished(game);
 			*playercurrentpos = '0';
@@ -79,10 +79,10 @@ int	move_left(t_game *game)
 	{
 		playercurrentpos = get_player(game->map, 'P') - 1;
 		if (playercurrentpos [0] == '0' || playercurrentpos[0] == 'C'
-			|| (playercurrentpos[0] == 'E' && game->medusa.qtcollect == -1))
+			|| (playercurrentpos[0] == 'E' && game->arts.qtcollect == -1))
 		{
 			if (playercurrentpos[0] == 'C')
-				game->medusa.qtcollect--;
+				game->arts.qtcollect--;
 			if (playercurrentpos[0] == 'E')
 				finished(game);
 			playercurrentpos[1] = '0';
@@ -101,10 +101,10 @@ int	move_right(t_game *game)
 	{
 		playercurrentpos = get_player(game->map, 'P');
 		if (playercurrentpos [1] == '0' || playercurrentpos[1] == 'C'
-			|| (playercurrentpos[1] == 'E' && game->medusa.qtcollect == -1))
+			|| (playercurrentpos[1] == 'E' && game->arts.qtcollect == -1))
 		{
 			if (playercurrentpos[1] == 'C')
-				game->medusa.qtcollect--;
+				game->arts.qtcollect--;
 			if (playercurrentpos[1] == 'E')
 				finished(game);
 			playercurrentpos[0] = '0';

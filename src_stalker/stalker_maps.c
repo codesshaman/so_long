@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   game_utils.c                                       :+:      :+:    :+:   */
+/*   stalker_maps.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jleslee <jleslee@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 23:09:52 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/13 21:20:14 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/15 16:47:37 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+
+// Загрузка карты из файла
 
 int	load_map(t_game *game)
 {
@@ -40,6 +42,8 @@ int	load_map(t_game *game)
 	return (0);
 }
 
+// Считывание карты
+
 int	read_map(t_game *game)
 {
 	int		fd;
@@ -50,12 +54,14 @@ int	read_map(t_game *game)
 	return (0);
 }
 
+// Вывод сообщения о возможности покинуть карту
+
 int	check_win_condition(t_game *game)
 {
-	if (game->medusa.qtcollect == 0)
+	if (game->arts.qtcollect == 0)
 	{
 		printf("You can now leave the map!\n");
-		game->medusa.qtcollect = -1;
+		game->arts.qtcollect = -1;
 	}
 	return (0);
 }

@@ -6,11 +6,13 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 21:17:59 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/15 11:48:30 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/15 13:48:12 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+
+// Инициализация клавиш
 
 static int	key_hook(int keycode, t_game *game)
 {
@@ -34,11 +36,13 @@ static int	key_hook(int keycode, t_game *game)
 	return (0);
 }
 
+// Инициализация игры
+
 static int	init_game(t_game *game)
 {
 	game->scr.scr = 0;
 	game->qtext = 0;
-	game->medusa.qtcollect = 0;
+	game->arts.qtcollect = 0;
 	game->stalker.qthero = 0;
 	return (0);
 }
@@ -55,7 +59,7 @@ int	main(int argc, char **argv)
 	read_map(&game);
 	init_game(&game);
 	level_validation(&game);
-	check_walling(&game);
+	check_surrounded(&game);
 	load_files(&game);
 	game.vrs.mlx = mlx_init();
 	load_objects(&game);

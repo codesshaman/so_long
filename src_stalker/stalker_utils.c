@@ -6,7 +6,7 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 21:21:31 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/15 11:51:16 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/15 13:50:55 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	load_files(t_game *game)
 	game->ground.path = GROUND;
 	game->tree.path = TREE;
 	game->bunker.path = BUNKER;
-	game->medusa.path = MEDUSA;
+	game->arts.path = MEDUSA;
 	return (0);
 }
 
@@ -34,8 +34,8 @@ int	load_objects(t_game *game)
 			&game->tree.img_wid, &game->tree.img_hght);
 	game->ground.img = mlx_xpm_file_to_image(game->vrs.mlx, game->ground.path,
 			&game->ground.img_wid, &game->ground.img_hght);
-	game->medusa.img = mlx_xpm_file_to_image(game->vrs.mlx, game->medusa.path,
-			&game->medusa.img_wid, &game->medusa.img_hght);
+	game->arts.img = mlx_xpm_file_to_image(game->vrs.mlx, game->arts.path,
+			&game->arts.img_wid, &game->arts.img_hght);
 	game->bunker.img = mlx_xpm_file_to_image(game->vrs.mlx, game->bunker.path,
 			&game->bunker.img_wid, &game->bunker.img_hght);
 	return (0);
@@ -48,11 +48,10 @@ int	unload_objects(t_game *game)
 	mlx_destroy_image(game->vrs.mlx, game->stalker.img);
 	mlx_destroy_image(game->vrs.mlx, game->ground.img);
 	mlx_destroy_image(game->vrs.mlx, game->tree.img);
-	mlx_destroy_image(game->vrs.mlx, game->medusa.img);
+	mlx_destroy_image(game->vrs.mlx, game->arts.img);
 	mlx_destroy_image(game->vrs.mlx, game->bunker.img);
 	return (0);
 }
-
 
 // Функция финиширования игрока
 

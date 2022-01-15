@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_handling.c                                   :+:      :+:    :+:   */
+/*   stalker_errors.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jleslee <jleslee@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 22:49:26 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/13 21:19:45 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/15 13:50:29 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+
+// Выводим ошибку, если карта не окружена лесом
 
 static int	frst_lst_line(t_game *game, int line, int col)
 {
@@ -30,7 +32,9 @@ static int	frst_lst_line(t_game *game, int line, int col)
 	return (0);
 }
 
-int	check_walling(t_game *game)
+// Проверяем, что карта окружена лесом
+
+int	check_surrounded(t_game *game)
 {
 	int	c;
 	int	l;
@@ -55,6 +59,8 @@ int	check_walling(t_game *game)
 	return (0);
 }
 
+// Проверяем допустимый набор символов в карте
+
 static int	check_invalid_chars(t_game *game, int pos)
 {
 	char	*valid_chars;
@@ -65,6 +71,8 @@ static int	check_invalid_chars(t_game *game, int pos)
 	else
 		return (0);
 }
+
+// Проверяем карту на валидность
 
 static int	check_map_content(t_game *game)
 {
@@ -79,11 +87,13 @@ static int	check_map_content(t_game *game)
 		if (game->map[i] == 'E')
 			game->qtext++;
 		if (game->map[i] == 'C')
-			game->medusa.qtcollect++;
+			game->arts.qtcollect++;
 		i++;
 	}
 	return (0);
 }
+
+// Выводим ошибки в случае невалидных значений
 
 int	level_validation(t_game *game)
 {
@@ -92,7 +102,7 @@ int	level_validation(t_game *game)
 		return (printf(ERROR_DEF OPLRERROR), free(game->map), exit(0), 0);
 	if (game->stalker.qthero > 1)
 		return (printf(ERROR_DEF MRPLRERROR), free(game->map), exit(0), 0);
-	if (game->medusa.qtcollect == 0)
+	if (game->arts.qtcollect == 0)
 		return (printf(ERROR_DEF ARTERROR), free(game->map), exit(0), 0);
 	if (game->qtext == 0)
 		return (printf(ERROR_DEF EXTERROR), free(game->map), exit(0), 0);

@@ -2,24 +2,23 @@ NAME		=	so_long
 
 MLX_DIR		=	./minilibx/
 
-SRC_DIR		=	./src/
+SRC_DIR		=	./src_stalker/
 
 BNS_DIR		=	./src_bonus/
 
-HEADER		= 	./src/so_long.h
+HEADER		= 	./src_stalker/so_long.h
 
 BNS_HEADER	=	./src_bonus/so_long_bonus.h
 
 VALGRIND 	=	valgrind --leak-check=full --show-leak-kinds=all
 
-SRC_FILES	=	game_utils.c \
-				image_printing.c \
-				player_movement.c \
-				stalker_checks.c \
+SRC_FILES	=	stalker_checks.c \
 				stalker_errors.c \
+				stalker_images.c \
+				stalker_maps.c \
 				stalker_objects.c \
+				stalker_player.c \
 				stalker_utils.c \
-				utils.c \
 				so_long.c
 				
 SRC_BONUS 	=	so_long_bonus.c \
@@ -58,7 +57,7 @@ leaktest:	all
 			$(VALGRIND) ./$(NAME) ./maps/Noenemies.ber
 
 leaktestb:	bonus 
-			$(VALGRIND) ./$(NAME) ./maps/PacMap.ber
+			$(VALGRIND) ./$(NAME) ./maps/S.T.A.L.K.E.R-2.ber
 
 clean:
 	@rm -f $(OBJS)

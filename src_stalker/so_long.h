@@ -6,7 +6,7 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 21:16:23 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/15 11:48:23 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/15 13:47:13 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@
 # define LEFT2      97
 # define RIGHT2     100
 # define ERROR_DEF  "Error\n"
-# define OPLRERROR  "Need a player position on the map!\n"
-# define MRPLRERROR "Only 1 player allowed!\n"
-# define ARTERROR	"Need at least one collectible!\n"
+# define OPLRERROR  "Need a stalker on the map!\n"
+# define MRPLRERROR "Only one stalker allowed!\n"
+# define ARTERROR	"Need at least one artefact!\n"
 # define EXTERROR   "Need at least one exit!\n"
 # define VLDMERROR  "Not a valid map!\n"
 # define PARAMERROR	"Invalid parameter!\n"
-# define WALL_ERR   "Map should be surrounded by walls!\n"
+# define WALL_ERR   "Map should be surrounded by forest!\n"
 # define SQREERROR	"Map cannot be a square\n"
 # define WINMSG		"You Won! Score: "
 # define LOSEMSG	"You Lost!\nFINAL SCORE: "
@@ -83,7 +83,7 @@ typedef struct s_game{
 	t_vars		vrs;
 	t_score		scr;
 	t_stalker	stalker;
-	t_collect	medusa;
+	t_collect	arts;
 	t_sprite	tree;
 	t_sprite	ground;
 	t_sprite	bunker;
@@ -95,30 +95,30 @@ typedef struct s_game{
 	char		*mappath;
 }				t_game;
 
-char	*get_player(char *s, char c);
-int		load_objects(t_game *game);
-int		unload_objects(t_game *game);
-int		load_files(t_game *game);
-int		load_map(t_game *game);
-int		read_map(t_game *game);
-int		endgame(t_game *game);
-int		put_tree(t_game *game, int x, int y);
-int		put_ground(t_game *game, int x, int y);
-int		put_stalker(t_game *game, int x, int y);
-int		put_artefact(t_game *game, int x, int y);
-int		put_bunker(t_game *game, int x, int y);
-int		move_up(t_game *game);
-int		move_down(t_game *game);
-int		move_left(t_game *game);
-int		move_right(t_game *game);
-int		image_to_window(t_game *game);
-int		imgtoPrint(t_game *game, int size, int column, int line);
-int		ft_strlen(char *s);
-void	*ft_calloc(size_t nmemb, size_t size);
-int		extension_check(t_game *game);
-int		check_walling(t_game *game);
-int		level_validation(t_game *game);
-int		check_win_condition(t_game *game);
-int		finished(t_game *game);
+char		*get_player(char *s, char c);
+int			load_objects(t_game *game);
+int			unload_objects(t_game *game);
+int			load_files(t_game *game);
+int			load_map(t_game *game);
+int			read_map(t_game *game);
+int			endgame(t_game *game);
+int			put_tree(t_game *game, int x, int y);
+int			put_ground(t_game *game, int x, int y);
+int			put_stalker(t_game *game, int x, int y);
+int			put_artefact(t_game *game, int x, int y);
+int			put_bunker(t_game *game, int x, int y);
+int			move_up(t_game *game);
+int			move_down(t_game *game);
+int			move_left(t_game *game);
+int			move_right(t_game *game);
+int			image_to_window(t_game *game);
+int			imgtoPrint(t_game *game, int size, int column, int line);
+int			ft_strlen(char *s);
+void		*ft_calloc(size_t nmemb, size_t size);
+int			extension_check(t_game *game);
+int			check_surrounded(t_game *game);
+int			level_validation(t_game *game);
+int			check_win_condition(t_game *game);
+int			finished(t_game *game);
 
 #endif
