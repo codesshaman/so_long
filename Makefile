@@ -22,14 +22,14 @@ SRC_FILES	=	stalker_checks.c \
 				so_long.c
 				
 SRC_BONUS 	=	so_long_bonus.c \
-				animation_bonus.c \
-				enemy_bonus.c \
-				error_handling_bonus.c \
-				game_utils_bonus.c \
-				image_printing_bonus.c \
-				player_movement_bonus.c \
-				print_sprites_bonus.c \
-				sprites_utils_bonus.c \
+				stalker_animation.c \
+				stalker_mutants.c \
+				stalker_errors.c \
+				stalker_utils.c \
+				stalker_images.c \
+				stalker_movement.c \
+				stalker_objects.c \
+				stalker_objects_utils.c \
 				utils_bonus.c 
 
 INCLUDES	=	./minilibx/mlx.h
