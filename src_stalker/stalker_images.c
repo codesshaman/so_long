@@ -6,13 +6,15 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 20:20:20 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/15 16:47:23 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/15 18:02:51 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int	imgtoPrint(t_game *game, int size, int column, int line)
+// Определяем положение объектов на карте
+
+int	images_letters(t_game *game, int size, int column, int line)
 {	
 	if (game->map[size] == '0')
 		put_ground(game, column, line);
@@ -38,7 +40,7 @@ int	image_to_window(t_game *game)
 	column = 0;
 	while (totalsize < game->flsz)
 	{
-		column += imgtoPrint(game, totalsize, column, line);
+		column += images_letters(game, totalsize, column, line);
 		if (game->map[totalsize++] == '\n')
 		{
 			column = 0;

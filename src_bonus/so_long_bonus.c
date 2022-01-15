@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   so_long_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jleslee <jleslee@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 11:12:13 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/13 21:23:20 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/15 17:56:14 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long_bonus.h"
+
+// Инициализация клавиш
 
 static int	key_hook(int keycode, t_game *game)
 {
@@ -19,15 +21,16 @@ static int	key_hook(int keycode, t_game *game)
 	check_steps = game->scr.scr;
 	if (keycode == ESC)
 		endgame(game);
-	if (keycode == UP)
+	if (keycode == W || keycode == UP)
 		move_up(game);
-	if (keycode == DOWN)
+	if (keycode == S || keycode == DOWN)
 		move_down(game);
-	if (keycode == LEFT)
+	if (keycode == A || keycode == LEFT)
 		move_left(game);
-	if (keycode == RIGHT)
+	if (keycode == D || keycode == RIGHT)
 		move_right(game);
-	if (keycode == RIGHT || keycode == LEFT || keycode == UP || keycode == DOWN)
+	if (keycode == D || keycode == A || keycode == W || keycode == S || \
+	keycode == UP || keycode == DOWN || keycode == LEFT || keycode == RIGHT)
 		image_to_window(game);
 	if (game->scr.scr > check_steps)
 		printf("Steps = %d\n", game->scr.scr);

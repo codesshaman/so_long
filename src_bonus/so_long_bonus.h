@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long_bonus.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jleslee <jleslee@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 11:22:33 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/13 21:22:52 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/15 18:00:24 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,18 @@
 # include <stdlib.h>
 # include "../minilibx/mlx.h"
 
-# define UP         119 
-# define DOWN       115
-# define LEFT       97
-# define RIGHT      100
+# define W         119 
+# define S       115
+# define A       97
+# define D      100
+
 # define ESC        65307
+
+# define UP 65362
+# define DOWN 65364
+# define LEFT 65361
+# define RIGHT 65363
+
 # define ERROR_DEF  "Error\n"
 # define OPLRERROR  "Need a player position on the map!\n"
 # define MRPLRERROR "Only 1 player allowed!\n"
@@ -33,9 +40,10 @@
 # define PARAMERROR	"Invalid parameter!\n"
 # define WALL_ERR   "Map should be surrounded by walls!\n"
 # define SQREERROR	"Map cannot be a square\n"
-# define WINMSG		"You Won! Score: "
-# define LOSEMSG	"You Lost!\nFINAL SCORE: "
-# define LEAVE		"You may now close the game.\n"
+
+# define WINMSG		"You Win! Score: "
+# define LOSEMSG	"You Lost!\nScore: "
+# define LEAVE		"You may close the game.\n"
 
 typedef struct s_vars{
 	void	*mlx;

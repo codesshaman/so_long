@@ -6,7 +6,7 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 21:17:59 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/15 13:48:12 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/15 17:54:15 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,16 @@ static int	key_hook(int keycode, t_game *game)
 	check_steps = game->scr.scr;
 	if (keycode == ESC)
 		endgame(game);
-	if (keycode == UP)
+	if (keycode == W || keycode == UP)
 		move_up(game);
-	if (keycode == DOWN)
+	if (keycode == S || keycode == DOWN)
 		move_down(game);
-	if (keycode == LEFT)
+	if (keycode == A || keycode == LEFT)
 		move_left(game);
-	if (keycode == RIGHT)
+	if (keycode == D || keycode == RIGHT)
 		move_right(game);
-	if (keycode == RIGHT || keycode == LEFT || keycode == UP || keycode == DOWN)
+	if (keycode == D || keycode == A || keycode == W || keycode == S || \
+	keycode == UP || keycode == DOWN || keycode == LEFT || keycode == RIGHT)
 		image_to_window(game);
 	if (game->scr.scr > check_steps)
 		printf("Steps = %d\n", game->scr.scr);

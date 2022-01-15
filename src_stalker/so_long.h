@@ -6,7 +6,7 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 21:16:23 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/15 13:47:13 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/15 18:02:54 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,18 @@
 # include <stdlib.h>
 # include "../minilibx/mlx.h"
 
-# define UP         119 
-# define DOWN       115
-# define LEFT       97
-# define RIGHT      100
+# define W         119 
+# define S       115
+# define A       97
+# define D      100
+
 # define ESC        65307
-# define UP2        119 
-# define DOWN2      115
-# define LEFT2      97
-# define RIGHT2     100
+
+# define UP 65362
+# define DOWN 65364
+# define LEFT 65361
+# define RIGHT 65363
+
 # define ERROR_DEF  "Error\n"
 # define OPLRERROR  "Need a stalker on the map!\n"
 # define MRPLRERROR "Only one stalker allowed!\n"
@@ -39,6 +42,7 @@
 # define WINMSG		"You Won! Score: "
 # define LOSEMSG	"You Lost!\nFINAL SCORE: "
 # define LEAVE		"You may now close the game.\n"
+
 # define STALKER	"./textures/stalker.xpm"
 # define GROUND 	"./textures/ground.xpm"
 # define TREE		"./textures/tree.xpm"
@@ -112,7 +116,7 @@ int			move_down(t_game *game);
 int			move_left(t_game *game);
 int			move_right(t_game *game);
 int			image_to_window(t_game *game);
-int			imgtoPrint(t_game *game, int size, int column, int line);
+int			images_letters(t_game *game, int size, int column, int line);
 int			ft_strlen(char *s);
 void		*ft_calloc(size_t nmemb, size_t size);
 int			extension_check(t_game *game);
