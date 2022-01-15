@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jleslee <jleslee@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 21:16:23 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/13 21:53:09 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/15 11:48:23 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,17 +96,17 @@ typedef struct s_game{
 }				t_game;
 
 char	*get_player(char *s, char c);
-int		load_sprites(t_game *game);
-int		unload_sprites(t_game *game);
+int		load_objects(t_game *game);
+int		unload_objects(t_game *game);
 int		load_files(t_game *game);
 int		load_map(t_game *game);
 int		read_map(t_game *game);
 int		endgame(t_game *game);
 int		put_tree(t_game *game, int x, int y);
 int		put_ground(t_game *game, int x, int y);
-int		put_player(t_game *game, int x, int y);
-int		put_collectible(t_game *game, int x, int y);
-int		put_exit(t_game *game, int x, int y);
+int		put_stalker(t_game *game, int x, int y);
+int		put_artefact(t_game *game, int x, int y);
+int		put_bunker(t_game *game, int x, int y);
 int		move_up(t_game *game);
 int		move_down(t_game *game);
 int		move_left(t_game *game);

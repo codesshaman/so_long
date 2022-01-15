@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jleslee <jleslee@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 21:17:59 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/13 21:18:06 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/15 11:48:30 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int	main(int argc, char **argv)
 	check_walling(&game);
 	load_files(&game);
 	game.vrs.mlx = mlx_init();
-	load_sprites(&game);
+	load_objects(&game);
 	game.vrs.mapw = game.col * game.tree.img_wid;
 	game.vrs.maph = game.lin * game.tree.img_hght;
 	game.vrs.win = mlx_new_window(game.vrs.mlx,

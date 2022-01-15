@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   image_printing.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jleslee <jleslee@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 20:20:20 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/13 21:20:40 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/15 11:42:40 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ int	imgtoPrint(t_game *game, int size, int column, int line)
 	if (game->map[size] == '1')
 		put_tree(game, column, line);
 	if (game->map[size] == 'P')
-		put_player(game, column, line);
+		put_stalker(game, column, line);
 	if (game->map[size] == 'C')
-		put_collectible(game, column, line);
+		put_artefact(game, column, line);
 	if (game->map[size] == 'E')
-		put_exit(game, column, line);
+		put_bunker(game, column, line);
 	return (1);
 }
 

@@ -15,9 +15,9 @@ VALGRIND 	=	valgrind --leak-check=full --show-leak-kinds=all
 SRC_FILES	=	game_utils.c \
 				image_printing.c \
 				player_movement.c \
-				print_sprites.c \
 				stalker_checks.c \
 				stalker_errors.c \
+				stalker_objects.c \
 				stalker_utils.c \
 				utils.c \
 				so_long.c
