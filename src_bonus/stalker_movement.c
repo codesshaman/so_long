@@ -6,7 +6,7 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 21:25:27 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/16 15:00:04 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/16 15:54:23 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,15 @@ int	move_up(t_game *game)
 	char	*playercurrentpos;
 	char	*playernextpos;
 
-	if (game->hero.qthero > 0)
+	if (game->stalker.qthero > 0)
 	{
 		playercurrentpos = get_player(game->map, 'P');
 		playernextpos = get_player(game->map, 'P') - game->col - 1;
 		if (*playernextpos == '0' || *playernextpos == 'C'
-			|| (*playernextpos == 'E' && game->clct.qtcollect == -1))
+			|| (*playernextpos == 'E' && game->art.qtcollect == -1))
 		{
 			if (*playernextpos == 'C')
-				game->clct.qtcollect--;
+				game->art.qtcollect--;
 			if (*playernextpos == 'E')
 				finished(game);
 			*playercurrentpos = '0';
@@ -58,15 +58,15 @@ int	move_down(t_game *game)
 	char	*playercurrentpos;
 	char	*playernextpos;
 
-	if (game->hero.qthero > 0)
+	if (game->stalker.qthero > 0)
 	{
 		playercurrentpos = get_player(game->map, 'P');
 		playernextpos = get_player(game->map, 'P') + game->col + 1;
 		if (*playernextpos == '0' || *playernextpos == 'C'
-			|| (*playernextpos == 'E' && game->clct.qtcollect == -1))
+			|| (*playernextpos == 'E' && game->art.qtcollect == -1))
 		{
 			if (*playernextpos == 'C')
-				game->clct.qtcollect--;
+				game->art.qtcollect--;
 			if (*playernextpos == 'E')
 				finished(game);
 			*playercurrentpos = '0';
@@ -83,14 +83,14 @@ int	move_left(t_game *game)
 {
 	char	*playercurrentpos;
 
-	if (game->hero.qthero > 0)
+	if (game->stalker.qthero > 0)
 	{
 		playercurrentpos = get_player(game->map, 'P') - 1;
 		if (playercurrentpos [0] == '0' || playercurrentpos[0] == 'C'
-			|| (playercurrentpos[0] == 'E' && game->clct.qtcollect == -1))
+			|| (playercurrentpos[0] == 'E' && game->art.qtcollect == -1))
 		{
 			if (playercurrentpos[0] == 'C')
-				game->clct.qtcollect--;
+				game->art.qtcollect--;
 			if (playercurrentpos[0] == 'E')
 				finished(game);
 			playercurrentpos[1] = '0';
@@ -107,14 +107,14 @@ int	move_right(t_game *game)
 {
 	char	*playercurrentpos;
 
-	if (game->hero.qthero > 0)
+	if (game->stalker.qthero > 0)
 	{
 		playercurrentpos = get_player(game->map, 'P');
 		if (playercurrentpos [1] == '0' || playercurrentpos[1] == 'C'
-			|| (playercurrentpos[1] == 'E' && game->clct.qtcollect == -1))
+			|| (playercurrentpos[1] == 'E' && game->art.qtcollect == -1))
 		{
 			if (playercurrentpos[1] == 'C')
-				game->clct.qtcollect--;
+				game->art.qtcollect--;
 			if (playercurrentpos[1] == 'E')
 				finished(game);
 			playercurrentpos[0] = '0';

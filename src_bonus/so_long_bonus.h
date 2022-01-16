@@ -6,7 +6,7 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 11:22:33 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/16 15:36:26 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/16 16:01:19 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@
 # define ERROR_DEF  "Error\n"
 # define OPLRERROR  "Need a player position on the map!\n"
 # define MRPLRERROR "Only 1 player allowed!\n"
-# define CLCTERROR  "Need at least one collectible!\n"
+# define CLCTERROR  "Need one or more artefacts!\n"
 # define EXTERROR   "Need at least one exit!\n"
 # define VLDMERROR  "Not a valid map!\n"
 # define PARAMERROR	"Invalid parameter!\n"
@@ -130,12 +130,12 @@ typedef struct s_score{
 typedef struct s_game{
 	t_vars		vrs;
 	t_score		scr;
-	t_hero		hero;
-	t_enemy		enemy;
-	t_collect	clct;
+	t_hero		stalker;
+	t_enemy		mutant;
+	t_collect	art;
 	t_sprite	tree;
 	t_sprite	floor;
-	t_sprite	ext;
+	t_sprite	bunker;
 	int			qtext;
 	int			flsz;
 	int			col;
@@ -152,12 +152,12 @@ int		load_map(t_game *game);
 int		read_map(t_game *game);
 int		endgame(t_game *game);
 int		put_tree(t_game *game, int x, int y);
-int		put_floor(t_game *game, int x, int y);
-int		put_player(t_game *game, int x, int y);
-int		put_collectible(t_game *game, int x, int y);
-int		put_exit(t_game *game, int x, int y);
-int		put_enemy(t_game *game, int x, int y);
-int		enemy_patrol(t_game *game);
+int		put_ground(t_game *game, int x, int y);
+int		put_stalker(t_game *game, int x, int y);
+int		put_artefact(t_game *game, int x, int y);
+int		put_bunker(t_game *game, int x, int y);
+int		put_mutant(t_game *game, int x, int y);
+int		mutant_patrol(t_game *game);
 int		animate_game(t_game *game);
 int		move_up(t_game *game);
 int		move_down(t_game *game);

@@ -6,7 +6,7 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 21:21:41 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/16 15:37:40 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/16 15:55:10 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,18 @@
 
 int	load_files(t_game *game)
 {
-	game->hero.path[HERO_UP] = STALKER;
-	game->hero.path[HERO_STILL] = STALKER2;
+	game->stalker.path[HERO_UP] = STALKER;
+	game->stalker.path[HERO_STILL] = STALKER2;
 	game->floor.path = GROUND;
 	game->tree.path = TREE;
-	game->ext.path = BUNKER;
-	game->clct.path[COLLECT_FRONT] = MEDUSA1;
-	game->clct.path[COLLECT_LEFT] = MEDUSA2;
-	game->clct.path[COLLECT_SIDE] = MEDUSA3;
-	game->clct.path[COLLECT_RIGHT] = MEDUSA4;
-	game->enemy.path[ENEMY_F1] = MUTANT1;
-	game->enemy.path[ENEMY_F2] = MUTANT2;
-	game->enemy.path[ENEMY_F3] = MUTANT3;
+	game->bunker.path = BUNKER;
+	game->art.path[COLLECT_FRONT] = MEDUSA1;
+	game->art.path[COLLECT_LEFT] = MEDUSA2;
+	game->art.path[COLLECT_SIDE] = MEDUSA3;
+	game->art.path[COLLECT_RIGHT] = MEDUSA4;
+	game->mutant.path[ENEMY_F1] = MUTANT1;
+	game->mutant.path[ENEMY_F2] = MUTANT2;
+	game->mutant.path[ENEMY_F3] = MUTANT3;
 	return (0);
 }
 
@@ -43,21 +43,21 @@ int	finished(t_game *game)
 
 int	load_textures(t_game *game)
 {
-	game->hero.img = mlx_xpm_file_to_image(game->vrs.mlx,
-			game->hero.path[game->hero.s_pos],
-			&game->hero.img_wid, &game->hero.img_hght);
+	game->stalker.img = mlx_xpm_file_to_image(game->vrs.mlx,
+			game->stalker.path[game->stalker.s_pos],
+			&game->stalker.img_wid, &game->stalker.img_hght);
 	game->tree.img = mlx_xpm_file_to_image(game->vrs.mlx, game->tree.path,
 			&game->tree.img_wid, &game->tree.img_hght);
 	game->floor.img = mlx_xpm_file_to_image(game->vrs.mlx, game->floor.path,
 			&game->floor.img_wid, &game->floor.img_hght);
-	game->clct.img = mlx_xpm_file_to_image(game->vrs.mlx,
-			game->clct.path[game->clct.s_pos], &game->clct.img_wid,
-			&game->clct.img_hght);
-	game->ext.img = mlx_xpm_file_to_image(game->vrs.mlx, game->ext.path,
-			&game->ext.img_wid, &game->ext.img_hght);
-	game->enemy.img = mlx_xpm_file_to_image(game->vrs.mlx,
-			game->enemy.path[game->enemy.s_pos],
-			&game->ext.img_wid, &game->ext.img_hght);
+	game->art.img = mlx_xpm_file_to_image(game->vrs.mlx,
+			game->art.path[game->art.s_pos], &game->art.img_wid,
+			&game->art.img_hght);
+	game->bunker.img = mlx_xpm_file_to_image(game->vrs.mlx, game->bunker.path,
+			&game->bunker.img_wid, &game->bunker.img_hght);
+	game->mutant.img = mlx_xpm_file_to_image(game->vrs.mlx,
+			game->mutant.path[game->mutant.s_pos],
+			&game->bunker.img_wid, &game->bunker.img_hght);
 	return (0);
 }
 
@@ -65,12 +65,12 @@ int	load_textures(t_game *game)
 
 int	unload_textures(t_game *game)
 {
-	mlx_destroy_image(game->vrs.mlx, game->hero.img);
+	mlx_destroy_image(game->vrs.mlx, game->stalker.img);
 	mlx_destroy_image(game->vrs.mlx, game->floor.img);
 	mlx_destroy_image(game->vrs.mlx, game->tree.img);
-	mlx_destroy_image(game->vrs.mlx, game->clct.img);
-	mlx_destroy_image(game->vrs.mlx, game->ext.img);
-	mlx_destroy_image(game->vrs.mlx, game->enemy.img);
+	mlx_destroy_image(game->vrs.mlx, game->art.img);
+	mlx_destroy_image(game->vrs.mlx, game->bunker.img);
+	mlx_destroy_image(game->vrs.mlx, game->mutant.img);
 	return (0);
 }
 

@@ -6,7 +6,7 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 11:12:13 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/16 15:36:07 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/16 15:51:55 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,16 +43,16 @@ static int	init_game(t_game *game)
 {
 	game->scr.scr = 0;
 	game->qtext = 0;
-	game->clct.qtcollect = 0;
-	game->clct.s_pos = 0;
-	game->clct.animate = 0;
-	game->hero.qthero = 0;
-	game->hero.s_pos = 0;
-	game->hero.animate = 0;
-	game->enemy.s_pos = 0;
-	game->enemy.anim = 0;
-	game->enemy.qtd = 0;
-	game->enemy.drct = 1;
+	game->art.qtcollect = 0;
+	game->art.s_pos = 0;
+	game->art.animate = 0;
+	game->stalker.qthero = 0;
+	game->stalker.s_pos = 0;
+	game->stalker.animate = 0;
+	game->mutant.s_pos = 0;
+	game->mutant.anim = 0;
+	game->mutant.qtd = 0;
+	game->mutant.drct = 1;
 	return (0);
 }
 

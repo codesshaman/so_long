@@ -6,11 +6,13 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 21:16:08 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/16 15:32:10 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/16 16:02:59 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long_bonus.h"
+
+// Загружаем карту
 
 int	load_map(t_game *game)
 {
@@ -40,6 +42,8 @@ int	load_map(t_game *game)
 	return (0);
 }
 
+// Читаем карту
+
 int	read_map(t_game *game)
 {
 	int		fd;
@@ -50,15 +54,19 @@ int	read_map(t_game *game)
 	return (0);
 }
 
+// Проверка окон
+
 int	check_win_condition(t_game *game)
 {
-	if (game->clct.qtcollect == 0)
+	if (game->art.qtcollect == 0)
 	{
 		printf("You can now leave the map!\n");
-		game->clct.qtcollect = -1;
+		game->art.qtcollect = -1;
 	}
 	return (0);
 }
+
+// Проверка объектов на карте
 
 int	check_extension(t_game *game)
 {

@@ -6,7 +6,7 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 21:25:59 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/16 15:36:54 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/16 16:01:32 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,17 @@ static int	create_trgb(int t, int r, int g, int b)
 int	images_letters(t_game *game, int size, int column, int line)
 {	
 	if (game->map[size] == '0')
-		put_floor(game, column, line);
+		put_ground(game, column, line);
 	if (game->map[size] == '1')
 		put_tree(game, column, line);
 	if (game->map[size] == 'P')
-		put_player(game, column, line);
+		put_stalker(game, column, line);
 	if (game->map[size] == 'C')
-		put_collectible(game, column, line);
+		put_artefact(game, column, line);
 	if (game->map[size] == 'E')
-		put_exit(game, column, line);
+		put_bunker(game, column, line);
 	if (game->map[size] == 'X')
-		put_enemy(game, column, line);
+		put_mutant(game, column, line);
 	return (1);
 }
 
