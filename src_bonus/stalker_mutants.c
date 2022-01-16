@@ -6,7 +6,7 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 21:30:33 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/16 15:09:25 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/16 15:37:11 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 int	put_enemy(t_game *game, int x, int y)
 {
 	mlx_put_image_to_window(game->vrs.mlx, game->vrs.win,
-		game->floor.img, (x * game->wall.img_wid),
-		(y * game->wall.img_hght));
+		game->floor.img, (x * game->tree.img_wid),
+		(y * game->tree.img_hght));
 	mlx_put_image_to_window(game->vrs.mlx, game->vrs.win,
-		game->enemy.img, (x * game->wall.img_wid),
-		(y * game->wall.img_hght));
+		game->enemy.img, (x * game->tree.img_wid),
+		(y * game->tree.img_hght));
 	return (0);
 }
 

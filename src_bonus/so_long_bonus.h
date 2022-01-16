@@ -6,7 +6,7 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 11:22:33 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/16 15:31:37 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/16 15:36:26 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@
 # define EXTERROR   "Need at least one exit!\n"
 # define VLDMERROR  "Not a valid map!\n"
 # define PARAMERROR	"Invalid parameter!\n"
-# define WALL_ERR   "Map should be surrounded by walls!\n"
+# define WALL_ERR   "Map should be surrounded by trees!\n"
 # define SQREERROR	"Map cannot be a square\n"
 
 # define WINMSG		"You Win! Score: "
@@ -133,7 +133,7 @@ typedef struct s_game{
 	t_hero		hero;
 	t_enemy		enemy;
 	t_collect	clct;
-	t_sprite	wall;
+	t_sprite	tree;
 	t_sprite	floor;
 	t_sprite	ext;
 	int			qtext;
@@ -151,7 +151,7 @@ int		load_files(t_game *game);
 int		load_map(t_game *game);
 int		read_map(t_game *game);
 int		endgame(t_game *game);
-int		put_wall(t_game *game, int x, int y);
+int		put_tree(t_game *game, int x, int y);
 int		put_floor(t_game *game, int x, int y);
 int		put_player(t_game *game, int x, int y);
 int		put_collectible(t_game *game, int x, int y);

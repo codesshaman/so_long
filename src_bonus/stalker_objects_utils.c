@@ -6,7 +6,7 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 21:21:41 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/16 15:31:41 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/16 15:37:40 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	load_files(t_game *game)
 	game->hero.path[HERO_UP] = STALKER;
 	game->hero.path[HERO_STILL] = STALKER2;
 	game->floor.path = GROUND;
-	game->wall.path = TREE;
+	game->tree.path = TREE;
 	game->ext.path = BUNKER;
 	game->clct.path[COLLECT_FRONT] = MEDUSA1;
 	game->clct.path[COLLECT_LEFT] = MEDUSA2;
@@ -46,8 +46,8 @@ int	load_textures(t_game *game)
 	game->hero.img = mlx_xpm_file_to_image(game->vrs.mlx,
 			game->hero.path[game->hero.s_pos],
 			&game->hero.img_wid, &game->hero.img_hght);
-	game->wall.img = mlx_xpm_file_to_image(game->vrs.mlx, game->wall.path,
-			&game->wall.img_wid, &game->wall.img_hght);
+	game->tree.img = mlx_xpm_file_to_image(game->vrs.mlx, game->tree.path,
+			&game->tree.img_wid, &game->tree.img_hght);
 	game->floor.img = mlx_xpm_file_to_image(game->vrs.mlx, game->floor.path,
 			&game->floor.img_wid, &game->floor.img_hght);
 	game->clct.img = mlx_xpm_file_to_image(game->vrs.mlx,
@@ -67,7 +67,7 @@ int	unload_textures(t_game *game)
 {
 	mlx_destroy_image(game->vrs.mlx, game->hero.img);
 	mlx_destroy_image(game->vrs.mlx, game->floor.img);
-	mlx_destroy_image(game->vrs.mlx, game->wall.img);
+	mlx_destroy_image(game->vrs.mlx, game->tree.img);
 	mlx_destroy_image(game->vrs.mlx, game->clct.img);
 	mlx_destroy_image(game->vrs.mlx, game->ext.img);
 	mlx_destroy_image(game->vrs.mlx, game->enemy.img);

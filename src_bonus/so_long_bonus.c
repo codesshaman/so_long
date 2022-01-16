@@ -6,7 +6,7 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 11:12:13 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/16 15:32:50 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/16 15:36:07 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,8 +72,8 @@ int	main(int argc, char **argv)
 	load_files(&game);
 	game.vrs.mlx = mlx_init();
 	load_textures(&game);
-	game.vrs.mapw = game.col * game.wall.img_wid;
-	game.vrs.maph = game.lin * game.wall.img_hght;
+	game.vrs.mapw = game.col * game.tree.img_wid;
+	game.vrs.maph = game.lin * game.tree.img_hght;
 	game.vrs.win = mlx_new_window(game.vrs.mlx,
 			game.vrs.mapw, game.vrs.maph, "SO_LONG");
 	mlx_loop_hook(game.vrs.mlx, animate_game, &game);
