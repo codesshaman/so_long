@@ -33,8 +33,7 @@ SRC_BONUS 	=	so_long_bonus.c \
 				stalker_images.c \
 				stalker_movement.c \
 				stalker_objects.c \
-				stalker_objects_utils.c \
-				utils_bonus.c 
+				stalker_objects_utils.c
 
 INCLUDES	=	./minilibx/mlx.h
 CC			=	clang
