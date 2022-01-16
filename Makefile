@@ -1,10 +1,14 @@
 NAME		=	so_long
 
+LIBFT			:=	./libft
+
 MLX_DIR		=	./minilibx/
 
 SRC_DIR		=	./src_stalker/
 
 BNS_DIR		=	./src_bonus/
+
+CDEPEND		:=	-L${LIBFT} -lft
 
 HEADER		= 	./src_stalker/so_long.h
 
@@ -51,13 +55,14 @@ $(NAME):	$(OBJS)
 				$(CC) $(FLAGS) -o $(NAME) $(SRCS) $(LIBS)
 
 bonus:		$(BONUSOBJS)
-				$(CC) $(FLAGS) -o $(NAME) $(BSRCS) $(LIBS)
+				make -C ${LIBFT} --no-print-directory
+				$(CC) $(FLAGS) -o $(NAME) $(BSRCS) $(LIBS) $(CDEPEND)
 
 leaktest:	all
-			$(VALGRIND) ./$(NAME) ./maps/Noenemies.ber
+			$(VALGRIND) ./$(NAME) ./maps/GreenMeadow.ber
 
 leaktestb:	bonus 
-			$(VALGRIND) ./$(NAME) ./maps/S.T.A.L.K.E.R-2.ber
+			$(VALGRIND) ./$(NAME) ./maps/GingerForest.ber
 
 clean:
 	@rm -f $(OBJS)
@@ -66,6 +71,7 @@ clean:
 
 fclean: clean
 	@rm -f $(NAME)
+	@make -C ${LIBFT} fclean --no-print-directory
 	@echo "$(NAME) deleted"
 
 re: fclean all

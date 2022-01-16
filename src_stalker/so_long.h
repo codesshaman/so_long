@@ -6,7 +6,7 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 21:16:23 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/15 18:02:54 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/15 19:30:07 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@
 # define LEAVE		"You may now close the game.\n"
 
 # define STALKER	"./textures/stalker.xpm"
+# define STALKER2	"./textures/stalker-alt.xpm"
 # define GROUND 	"./textures/ground.xpm"
 # define TREE		"./textures/tree.xpm"
 # define BUNKER		"./textures/bunker.xpm"

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   image_printing_bonus.c                             :+:      :+:    :+:   */
+/*   stalker_images.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jleslee <jleslee@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 21:25:59 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/13 21:26:02 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/16 14:29:49 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,21 @@ static int	create_trgb(int t, int r, int g, int b)
 {
 	return (t << 24 | r << 16 | g << 8 | b);
 }
+
+// static int	int_length(int n)
+// {
+// 	int		len;
+
+// 	len = 0;
+// 	if (n <= 0)
+// 		len++;
+// 	while (n != 0)
+// 	{
+// 		n /= 10;
+// 		len++;
+// 	}
+// 	return (len);
+// }
 
 int	imgtoPrint(t_game *game, int size, int column, int line)
 {	

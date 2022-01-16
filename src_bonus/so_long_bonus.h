@@ -6,7 +6,7 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 11:22:33 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/15 18:00:24 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/16 14:27:09 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <string.h>
 # include <stdlib.h>
+# include "../libft/libft.h"
 # include "../minilibx/mlx.h"
 
 # define W         119 
@@ -152,9 +153,6 @@ int		move_left(t_game *game);
 int		move_right(t_game *game);
 int		image_to_window(t_game *game);
 int		imgtoPrint(t_game *game, int size, int column, int line);
-int		ft_strlen(char *s);
-char	*ft_itoa(int n);
-void	*ft_calloc(size_t nmemb, size_t size);
 int		check_extension(t_game *game);
 int		check_walling(t_game *game);
 int		level_validation(t_game *game);
