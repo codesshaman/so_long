@@ -6,7 +6,7 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 11:22:33 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/16 14:55:35 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/16 15:31:37 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,19 @@
 
 # define WINMSG		"You Win! Score: "
 # define LOSEMSG	"You Lost!\nScore: "
-# define LEAVE		"You may close the game.\n"
+
+# define STALKER	"./textures/stalker.xpm"
+# define STALKER2	"./textures/stalker-alt.xpm"
+# define GROUND		"./textures/ground.xpm"
+# define TREE		"./textures/tree.xpm"
+# define BUNKER		"./textures/bunker.xpm"
+# define MEDUSA1	"./textures/medusa.xpm"
+# define MEDUSA2	"./textures/medusa2.xpm"
+# define MEDUSA3	"./textures/medusa3.xpm"
+# define MEDUSA4	"./textures/medusa4.xpm"
+# define MUTANT1	"./textures/mutant1.xpm"
+# define MUTANT2	"./textures/mutant2.xpm"
+# define MUTANT3	"./textures/mutant3.xpm"
 
 typedef struct s_vars{
 	void	*mlx;
@@ -133,8 +145,8 @@ typedef struct s_game{
 }	t_game;
 
 char	*get_player(char *s, char c);
-int		load_sprites(t_game *game);
-int		unload_sprites(t_game *game);
+int		load_textures(t_game *game);
+int		unload_textures(t_game *game);
 int		load_files(t_game *game);
 int		load_map(t_game *game);
 int		read_map(t_game *game);

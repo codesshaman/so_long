@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   enemy_bonus.c                                      :+:      :+:    :+:   */
+/*   stalker_mutants.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jleslee <jleslee@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 21:30:33 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/13 21:26:42 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/16 15:09:25 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long_bonus.h"
+
+// Загружаем мутанта
 
 int	put_enemy(t_game *game, int x, int y)
 {
@@ -22,6 +24,8 @@ int	put_enemy(t_game *game, int x, int y)
 		(y * game->wall.img_hght));
 	return (0);
 }
+
+// Проверяем позицию мутанта на карте
 
 static void	check_positions(t_game *game, char **nextpos)
 {
@@ -38,6 +42,8 @@ static void	check_positions(t_game *game, char **nextpos)
 	if (game->enemy.chk == game->enemy.qtd)
 		game->enemy.drct *= -1;
 }
+
+// Получаем позицию мутанта
 
 char	**getenemypositions(t_game *game)
 {
@@ -65,6 +71,8 @@ char	**getenemypositions(t_game *game)
 	return (enemies);
 }
 
+// Задаём движение мутанта по карте
+
 int	enemy_patrol(t_game *game)
 {
 	char	**enep;
@@ -83,8 +91,8 @@ int	enemy_patrol(t_game *game)
 		{
 			if (*nxtp[i] == 'P' && game->enemy.anim > 8000)
 			{
-				printf(LOSEMSG "%d\n" LEAVE, game->scr.scr);
 				game->hero.qthero = -1;
+				return (endgame(game), 1);
 			}
 			*enep[i] = '0';
 			*nxtp[i] = 'X';

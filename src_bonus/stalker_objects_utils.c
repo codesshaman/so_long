@@ -1,44 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sprites_utils_bonus.c                              :+:      :+:    :+:   */
+/*   stalker_objects_utils.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jleslee <jleslee@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 21:21:41 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/13 21:25:51 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/16 15:31:41 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long_bonus.h"
 
+// Загрузка текстур
+
 int	load_files(t_game *game)
 {
-	game->hero.path[HERO_UP] = "./src_bonus/imgs/hero/herooms.xpm";
-	game->hero.path[HERO_STILL] = "./src_bonus/imgs/hero/herocms.xpm";
-	game->floor.path = "./src_bonus/imgs/tileset/tileset.xpm";
-	game->wall.path = "./src_bonus/imgs/tileset/walls.xpm";
-	game->ext.path = "./src_bonus/imgs/tileset/exits.xpm";
-	game->clct.path[COLLECT_FRONT]
-		= "./src_bonus/imgs/collectible/coinfront.xpm";
-	game->clct.path[COLLECT_LEFT] = "./src_bonus/imgs/collectible/coinleft.xpm";
-	game->clct.path[COLLECT_SIDE]
-		= "./src_bonus/imgs/collectible/coinside.xpm";
-	game->clct.path[COLLECT_RIGHT]
-		= "./src_bonus/imgs/collectible/coinright.xpm";
-	game->enemy.path[ENEMY_F1] = "./src_bonus/imgs/enemy/monster1.xpm";
-	game->enemy.path[ENEMY_F2] = "./src_bonus/imgs/enemy/monster2.xpm";
-	game->enemy.path[ENEMY_F3] = "./src_bonus/imgs/enemy/monster3.xpm";
+	game->hero.path[HERO_UP] = STALKER;
+	game->hero.path[HERO_STILL] = STALKER2;
+	game->floor.path = GROUND;
+	game->wall.path = TREE;
+	game->ext.path = BUNKER;
+	game->clct.path[COLLECT_FRONT] = MEDUSA1;
+	game->clct.path[COLLECT_LEFT] = MEDUSA2;
+	game->clct.path[COLLECT_SIDE] = MEDUSA3;
+	game->clct.path[COLLECT_RIGHT] = MEDUSA4;
+	game->enemy.path[ENEMY_F1] = MUTANT1;
+	game->enemy.path[ENEMY_F2] = MUTANT2;
+	game->enemy.path[ENEMY_F3] = MUTANT3;
 	return (0);
 }
+
+// Окончание игры
 
 int	finished(t_game *game)
 {
 	printf(WINMSG "%d\n", game->scr.scr);
-	return (endgame(game), 0);
+	return (endgame(game), 1);
 }
 
-int	load_sprites(t_game *game)
+// Загрузка текстур
+
+int	load_textures(t_game *game)
 {
 	game->hero.img = mlx_xpm_file_to_image(game->vrs.mlx,
 			game->hero.path[game->hero.s_pos],
@@ -58,7 +61,9 @@ int	load_sprites(t_game *game)
 	return (0);
 }
 
-int	unload_sprites(t_game *game)
+// Выгрузка текстур
+
+int	unload_textures(t_game *game)
 {
 	mlx_destroy_image(game->vrs.mlx, game->hero.img);
 	mlx_destroy_image(game->vrs.mlx, game->floor.img);
@@ -69,9 +74,11 @@ int	unload_sprites(t_game *game)
 	return (0);
 }
 
+// Выход из игры
+
 int	endgame(t_game *game)
 {
-	unload_sprites(game);
+	unload_textures(game);
 	mlx_destroy_window(game->vrs.mlx, game->vrs.win);
 	mlx_destroy_display(game->vrs.mlx);
 	free(game->vrs.mlx);

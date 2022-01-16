@@ -6,7 +6,7 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 21:26:47 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/16 14:52:20 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/16 15:32:42 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ static int	animate_hero(t_game *game)
 {
 	if (game->hero.animate > 30000)
 	{
-		unload_sprites(game);
-		load_sprites(game);
+		unload_textures(game);
+		load_textures(game);
 		image_to_window(game);
 		game->hero.s_pos++;
 		if (game->hero.s_pos == 2)
@@ -35,8 +35,8 @@ static int	animate_clct(t_game *game)
 {
 	if (game->clct.animate > 8000)
 	{
-		unload_sprites(game);
-		load_sprites(game);
+		unload_textures(game);
+		load_textures(game);
 		image_to_window(game);
 		game->clct.s_pos++;
 		game->enemy.s_pos++;
