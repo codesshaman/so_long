@@ -20,8 +20,8 @@ SRC_FILES	=	stalker_checks.c \
 				stalker_errors.c \
 				stalker_images.c \
 				stalker_maps.c \
+				stalker_movement.c \
 				stalker_objects.c \
-				stalker_player.c \
 				stalker_utils.c \
 				so_long.c
 				

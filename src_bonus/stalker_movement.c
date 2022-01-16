@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   player_movement_bonus.c                            :+:      :+:    :+:   */
+/*   stalker_movement.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jleslee <jleslee@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 21:25:27 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/13 21:25:40 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/16 15:00:04 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long_bonus.h"
+
+// Получение текущей позиции игрока
 
 char	*get_player(char *s, char c)
 {
@@ -22,6 +24,8 @@ char	*get_player(char *s, char c)
 	}
 	return (NULL);
 }
+
+// Сдвиг игрока вверх
 
 int	move_up(t_game *game)
 {
@@ -47,6 +51,8 @@ int	move_up(t_game *game)
 	return (0);
 }
 
+// Сдвиг игрока вниз
+
 int	move_down(t_game *game)
 {
 	char	*playercurrentpos;
@@ -71,6 +77,8 @@ int	move_down(t_game *game)
 	return (0);
 }
 
+// Сдвиг игрока влево
+
 int	move_left(t_game *game)
 {
 	char	*playercurrentpos;
@@ -92,6 +100,8 @@ int	move_left(t_game *game)
 	}
 	return (0);
 }
+
+// Сдвиг игрока вправо
 
 int	move_right(t_game *game)
 {

@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   animation_bonus.c                                  :+:      :+:    :+:   */
+/*   stalker_animation.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jleslee <jleslee@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 21:26:47 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/13 21:26:50 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/16 14:52:20 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long_bonus.h"
+
+// Движение героя
 
 static int	animate_hero(t_game *game)
 {
@@ -26,6 +28,8 @@ static int	animate_hero(t_game *game)
 	}
 	return (0);
 }
+
+// Движение монстров
 
 static int	animate_clct(t_game *game)
 {
@@ -47,6 +51,8 @@ static int	animate_clct(t_game *game)
 	return (0);
 }
 
+// Анимация героя в движении
+
 int	animate_char(t_game *game)
 {
 	animate_hero(game);
@@ -56,6 +62,8 @@ int	animate_char(t_game *game)
 	game->enemy.anim++;
 	return (0);
 }
+
+// Всё вместе
 
 int	animate_game(t_game *game)
 {

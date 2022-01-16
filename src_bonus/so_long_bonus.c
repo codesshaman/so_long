@@ -6,7 +6,7 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 11:12:13 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/15 17:56:14 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/16 14:49:02 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ static int	key_hook(int keycode, t_game *game)
 	return (0);
 }
 
+// Инициализация игры
+
 static int	init_game(t_game *game)
 {
 	game->scr.scr = 0;
@@ -66,7 +68,7 @@ int	main(int argc, char **argv)
 	read_map(&game);
 	init_game(&game);
 	level_validation(&game);
-	check_walling(&game);
+	check_surrounded(&game);
 	load_files(&game);
 	game.vrs.mlx = mlx_init();
 	load_sprites(&game);

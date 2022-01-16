@@ -6,7 +6,7 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 11:22:33 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/16 14:27:09 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/16 14:55:35 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,9 +152,9 @@ int		move_down(t_game *game);
 int		move_left(t_game *game);
 int		move_right(t_game *game);
 int		image_to_window(t_game *game);
-int		imgtoPrint(t_game *game, int size, int column, int line);
+int		images_letters(t_game *game, int size, int column, int line);
 int		check_extension(t_game *game);
-int		check_walling(t_game *game);
+int		check_surrounded(t_game *game);
 int		level_validation(t_game *game);
 int		check_win_condition(t_game *game);
 int		finished(t_game *game);

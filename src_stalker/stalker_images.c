@@ -6,7 +6,7 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 20:20:20 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/15 18:02:51 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/16 15:02:23 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ int	images_letters(t_game *game, int size, int column, int line)
 		put_bunker(game, column, line);
 	return (1);
 }
+
+// Загружаем объекты в окна
 
 int	image_to_window(t_game *game)
 {

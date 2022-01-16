@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_handling_bonus.c                             :+:      :+:    :+:   */
+/*   stalker_errors.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jleslee <jleslee@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 21:21:23 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/13 21:26:30 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/16 14:54:27 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long_bonus.h"
+
+// Выводим ошибку, если карта не окружена лесом
 
 static int	frst_lst_line(t_game *game, int line, int col)
 {
@@ -30,7 +32,9 @@ static int	frst_lst_line(t_game *game, int line, int col)
 	return (0);
 }
 
-int	check_walling(t_game *game)
+// Проверка, окружена ли карта
+
+int	check_surrounded(t_game *game)
 {
 	int	c;
 	int	l;
@@ -55,6 +59,8 @@ int	check_walling(t_game *game)
 	return (0);
 }
 
+// Набор валидных символов
+
 static int	check_invalid_chars(t_game *game, int pos)
 {
 	char	*valid_chars;
@@ -65,6 +71,8 @@ static int	check_invalid_chars(t_game *game, int pos)
 	else
 		return (0);
 }
+
+// Проверка содержимого карты на валидность
 
 static int	check_map_content(t_game *game)
 {
@@ -86,6 +94,8 @@ static int	check_map_content(t_game *game)
 	}
 	return (0);
 }
+
+// Вывод ошибок в случае инвалидности
 
 int	level_validation(t_game *game)
 {

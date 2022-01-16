@@ -6,33 +6,22 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 21:25:59 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/16 14:29:49 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/16 14:57:46 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long_bonus.h"
+
+// Проверка цветов
 
 static int	create_trgb(int t, int r, int g, int b)
 {
 	return (t << 24 | r << 16 | g << 8 | b);
 }
 
-// static int	int_length(int n)
-// {
-// 	int		len;
+// Расстановка объектов на карте
 
-// 	len = 0;
-// 	if (n <= 0)
-// 		len++;
-// 	while (n != 0)
-// 	{
-// 		n /= 10;
-// 		len++;
-// 	}
-// 	return (len);
-// }
-
-int	imgtoPrint(t_game *game, int size, int column, int line)
+int	images_letters(t_game *game, int size, int column, int line)
 {	
 	if (game->map[size] == '0')
 		put_floor(game, column, line);
@@ -49,6 +38,8 @@ int	imgtoPrint(t_game *game, int size, int column, int line)
 	return (1);
 }
 
+// Загрузка объектов в окна
+
 int	image_to_window(t_game *game)
 {
 	int		line;
@@ -61,7 +52,7 @@ int	image_to_window(t_game *game)
 	column = 0;
 	while (totalsize < game->flsz)
 	{
-		column += imgtoPrint(game, totalsize, column, line);
+		column += images_letters(game, totalsize, column, line);
 		if (game->map[totalsize++] == '\n')
 		{
 			column = 0;
