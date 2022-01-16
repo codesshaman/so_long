@@ -6,7 +6,7 @@
 /*   By: jleslee <jleslee@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 11:12:13 by jleslee           #+#    #+#             */
-/*   Updated: 2022/01/16 15:51:55 by jleslee          ###   ########.fr       */
+/*   Updated: 2022/01/17 00:09:45 by jleslee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int	main(int argc, char **argv)
 	mlx_loop_hook(game.vrs.mlx, animate_game, &game);
 	image_to_window(&game);
 	mlx_key_hook(game.vrs.win, key_hook, &game);
-	mlx_hook(game.vrs.win, 33, 1L << 2, endgame, &game);
+	mlx_hook(game.vrs.win, 0, 1, key_hook, &game);
 	mlx_expose_hook(game.vrs.win, image_to_window, &game);
 	mlx_loop(game.vrs.mlx);
 	return (0);
